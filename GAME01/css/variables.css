@@ -1,0 +1,56 @@
+@import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/DungGeunMo.woff');
+
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* Colors - Retro RPG palette */
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-panel: #0f3460;
+  --bg-dialogue: #1a1a2e;
+
+  --text-primary: #e8e8e8;
+  --text-secondary: #a0a0b0;
+  --text-highlight: #f0d060;
+  --text-npc-name: #70c0f0;
+
+  --border-primary: #e8e8e8;
+  --border-highlight: #f0d060;
+  --border-panel: #4a6fa5;
+
+  --btn-bg: #0f3460;
+  --btn-hover: #1a5276;
+  --btn-active: #2471a3;
+  --btn-text: #e8e8e8;
+
+  --heart-full: #e74c3c;
+  --heart-empty: #4a4a5a;
+
+  --color-yeonhee: #ff9ff3;
+  --color-dalsoo: #c0a060;
+  --color-haemi: #70c0f0;
+  --color-janggun: #a0d060;
+  --color-bomi: #ffb347;
+
+  /* Spacing */
+  --gap-sm: 4px;
+  --gap-md: 8px;
+  --gap-lg: 16px;
+  --gap-xl: 24px;
+
+  /* Font sizes */
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 20px;
+  --font-xl: 28px;
+  --font-title: 36px;
+
+  /* Game container */
+  --game-width: 800px;
+  --game-height: 600px;
+}

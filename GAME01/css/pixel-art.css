@@ -1,0 +1,50 @@
+/* NPC Portrait Pixel Art (CSS box-shadow) */
+/* Each portrait is built with a base element scaled up */
+
+.portrait-base {
+  width: 1px;
+  height: 1px;
+  transform-origin: top left;
+  transform: scale(4);
+  margin: 8px;
+}
+
+/* 연희 - 분홍 계열, 밝은 표정 */
+.portrait-yeonhee {
+  composes: portrait-base;
+  box-shadow:
+    /* Hair row 0-2 */
+    3px 0 var(--color-yeonhee), 4px 0 var(--color-yeonhee), 5px 0 var(--color-yeonhee), 6px 0 var(--color-yeonhee), 7px 0 var(--color-yeonhee), 8px 0 var(--color-yeonhee), 9px 0 var(--color-yeonhee),
+    2px 1px var(--color-yeonhee), 3px 1px var(--color-yeonhee), 4px 1px #d681b8, 5px 1px #d681b8, 6px 1px #d681b8, 7px 1px #d681b8, 8px 1px var(--color-yeonhee), 9px 1px var(--color-yeonhee), 10px 1px var(--color-yeonhee),
+    2px 2px var(--color-yeonhee), 3px 2px #f5d6b8, 4px 2px #f5d6b8, 5px 2px #f5d6b8, 6px 2px #f5d6b8, 7px 2px #f5d6b8, 8px 2px #f5d6b8, 9px 2px var(--color-yeonhee),
+    /* Face row 3-6 */
+    2px 3px var(--color-yeonhee), 3px 3px #f5d6b8, 4px 3px #2c1810, 5px 3px #f5d6b8, 6px 3px #f5d6b8, 7px 3px #2c1810, 8px 3px #f5d6b8, 9px 3px var(--color-yeonhee),
+    2px 4px var(--color-yeonhee), 3px 4px #f5d6b8, 4px 4px #f5d6b8, 5px 4px #f5d6b8, 6px 4px #e8a090, 7px 4px #f5d6b8, 8px 4px #f5d6b8, 9px 4px var(--color-yeonhee),
+    3px 5px #f5d6b8, 4px 5px #f5d6b8, 5px 5px #f5d6b8, 6px 5px #f5d6b8, 7px 5px #f5d6b8, 8px 5px #f5d6b8,
+    4px 6px #f5d6b8, 5px 6px #e07070, 6px 6px #e07070, 7px 6px #f5d6b8,
+    /* Body row 7-9 */
+    3px 7px var(--color-yeonhee), 4px 7px var(--color-yeonhee), 5px 7px #f0f0f0, 6px 7px #f0f0f0, 7px 7px var(--color-yeonhee), 8px 7px var(--color-yeonhee),
+    2px 8px var(--color-yeonhee), 3px 8px #f0f0f0, 4px 8px #f0f0f0, 5px 8px #f0f0f0, 6px 8px #f0f0f0, 7px 8px #f0f0f0, 8px 8px #f0f0f0, 9px 8px var(--color-yeonhee);
+}
+
+/* 달수 - 갈색 계열 */
+.portrait-dalsoo .portrait-icon,
+.portrait-haemi .portrait-icon,
+.portrait-janggun .portrait-icon,
+.portrait-bomi .portrait-icon,
+.portrait-yeonhee .portrait-icon {
+  display: none;
+}
+
+/* Simplified emoji-based portraits for now */
+.portrait-emoji {
+  font-size: 40px;
+  line-height: 1;
+}
+
+/* Location icons */
+.loc-town-hall .location-icon::after { content: '🏛️'; }
+.loc-river .location-icon::after { content: '🌊'; }
+.loc-market .location-icon::after { content: '🏪'; }
+.loc-shrine .location-icon::after { content: '🌳'; }
+.loc-inn .location-icon::after { content: '🏠'; }

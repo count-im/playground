@@ -1,0 +1,446 @@
+/* ============ Title Screen ============ */
+#screen-title {
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-xl);
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-xl);
+}
+
+.title-logo {
+  font-size: var(--font-title);
+  color: var(--text-highlight);
+  text-align: center;
+  text-shadow: 2px 2px 0 #806020;
+  letter-spacing: 4px;
+}
+
+.title-subtitle {
+  font-size: var(--font-md);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.title-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  align-items: center;
+}
+
+.title-buttons button {
+  font-size: var(--font-lg);
+  color: var(--text-primary);
+  padding: var(--gap-md) var(--gap-xl);
+  transition: color 0.15s;
+}
+
+.title-buttons button:hover {
+  color: var(--text-highlight);
+}
+
+.title-buttons button:disabled {
+  color: var(--text-secondary);
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.title-buttons button::before {
+  content: '▶ ';
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.title-buttons button:hover::before {
+  opacity: 1;
+}
+
+/* ============ Common Button Styles ============ */
+.btn {
+  font-size: var(--font-md);
+  color: var(--text-primary);
+  padding: var(--gap-md) var(--gap-lg);
+  border: 2px solid var(--border-panel);
+  background: var(--bg-secondary);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  border-color: var(--text-highlight);
+  background: var(--bg-panel);
+  color: var(--text-highlight);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  font-size: var(--font-lg);
+}
+
+/* ============ Village Screen ============ */
+.village-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.village-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--gap-md) var(--gap-lg);
+  border-bottom: 2px solid var(--border-panel);
+  font-size: var(--font-md);
+}
+
+.day-display {
+  color: var(--text-highlight);
+  font-size: var(--font-lg);
+}
+
+.actions-display {
+  color: var(--text-primary);
+}
+
+.village-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: var(--gap-lg);
+  padding: var(--gap-lg);
+  align-content: center;
+}
+
+.village-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-sm);
+  padding: var(--gap-md);
+  border: 2px solid var(--border-panel);
+  background: var(--bg-secondary);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  min-height: 100px;
+}
+
+.village-tile:hover {
+  border-color: var(--text-highlight);
+  background: var(--bg-panel);
+}
+
+.village-tile.tile-empty {
+  border-color: transparent;
+  background: transparent;
+  cursor: default;
+}
+
+.tile-icon {
+  font-size: 32px;
+}
+
+.tile-name {
+  font-size: var(--font-sm);
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.tile-npcs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.tile-npc-name {
+  font-size: var(--font-sm);
+  color: var(--text-npc-name);
+}
+
+.village-bottom-bar {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap-lg);
+  padding: var(--gap-md);
+  border-top: 2px solid var(--border-panel);
+}
+
+/* ============ Dialogue Screen ============ */
+.dialogue-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.dialogue-header {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+  padding: var(--gap-md) var(--gap-lg);
+  border-bottom: 2px solid var(--border-panel);
+}
+
+.dialogue-npc-emoji {
+  font-size: 32px;
+}
+
+.dialogue-npc-name {
+  font-size: var(--font-lg);
+  color: var(--text-npc-name);
+}
+
+.dialogue-npc-role {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+.dialogue-location {
+  margin-left: auto;
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+.dialogue-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--gap-xl);
+  cursor: pointer;
+  border: 2px solid var(--border-panel);
+  margin: var(--gap-lg);
+  background: var(--bg-dialogue);
+  position: relative;
+  min-height: 150px;
+}
+
+.dialogue-speaker {
+  font-size: var(--font-md);
+  color: var(--text-highlight);
+  margin-bottom: var(--gap-md);
+  display: block;
+}
+
+.dialogue-text {
+  font-size: var(--font-md);
+  color: var(--text-primary);
+  line-height: 1.8;
+}
+
+.dialogue-hint {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  text-align: center;
+  padding: var(--gap-sm);
+  animation: blink 1s infinite;
+}
+
+.dialogue-choices {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  padding: 0 var(--gap-xl) var(--gap-lg);
+}
+
+.btn-choice {
+  font-size: var(--font-md);
+  color: var(--text-primary);
+  padding: var(--gap-md) var(--gap-lg);
+  border: 2px solid var(--border-panel);
+  background: var(--bg-secondary);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-choice:hover {
+  border-color: var(--text-highlight);
+  background: var(--bg-panel);
+  color: var(--text-highlight);
+}
+
+/* ============ Day Summary ============ */
+#screen-day-summary {
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-xl);
+}
+
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-lg);
+  max-width: 500px;
+}
+
+.summary-title {
+  font-size: var(--font-xl);
+  color: var(--text-highlight);
+  text-align: center;
+}
+
+.summary-log {
+  width: 100%;
+}
+
+.summary-log ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.summary-log li {
+  font-size: var(--font-md);
+  color: var(--text-primary);
+  padding-left: var(--gap-lg);
+}
+
+.summary-log li::before {
+  content: '• ';
+  color: var(--text-highlight);
+}
+
+.summary-affinity {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  width: 100%;
+  padding: var(--gap-md);
+  border: 1px solid var(--border-panel);
+}
+
+.summary-npc {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+  font-size: var(--font-md);
+}
+
+.summary-npc-name {
+  width: 100px;
+  color: var(--text-npc-name);
+}
+
+.summary-hearts {
+  color: var(--heart-full);
+  letter-spacing: 2px;
+}
+
+.summary-save-note {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+/* ============ Ending Screen ============ */
+#screen-ending {
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-xl);
+}
+
+.ending-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-lg);
+  max-width: 600px;
+}
+
+.ending-name {
+  font-size: var(--font-xl);
+  color: var(--text-highlight);
+  text-align: center;
+  text-shadow: 2px 2px 0 #806020;
+}
+
+.ending-subtitle {
+  font-size: var(--font-md);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.ending-text-area {
+  cursor: pointer;
+  padding: var(--gap-lg);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ending-text {
+  font-size: var(--font-md);
+  color: var(--text-primary);
+  line-height: 2;
+  text-align: center;
+}
+
+.ending-hint {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  animation: blink 1s infinite;
+}
+
+/* ============ Narration overlay ============ */
+.narration-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--gap-xl);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.narration-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-lg);
+}
+
+.narration-text {
+  font-size: var(--font-lg);
+  color: var(--text-primary);
+  line-height: 2;
+  text-align: center;
+  max-width: 600px;
+}
+
+.narration-hint {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  animation: blink 1s infinite;
+}
+
+/* NPC choice buttons in narration overlay */
+.npc-choice-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  margin-top: var(--gap-lg);
+  width: 100%;
+  max-width: 300px;
+}
+
+.npc-choice-buttons .btn-choice {
+  text-align: center;
+}
